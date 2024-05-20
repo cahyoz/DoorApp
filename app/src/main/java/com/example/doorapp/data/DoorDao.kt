@@ -15,6 +15,9 @@ interface DoorDao {
     @Delete
     suspend fun deleteDoor (door: Door)
 
+    @Query("SELECT * FROM Door")
+    suspend fun getAllDoors(): Flow<List<Door>>
+
     @Query("SELECT * FROM Door ORDER BY name ASC")
     fun getContactOrderByName() : Flow<List<Door>>
 
