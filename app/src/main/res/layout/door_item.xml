@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="door"
+            type="com.example.doorapp.data.Door" />
+    </data>
+
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="100dp"
@@ -12,12 +21,13 @@
         android:padding="24dp">
 
         <TextView
+            android:id="@+id/tv_door_name"
             style="@style/prompt"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="32dp"
             android:gravity="center|start"
-            android:text="@string/door_name"
+            android:text="@{door.name}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/image_lock"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,9 +42,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.5"
-
+            app:lockStatus="@{door.isLocked}"
             app:srcCompat="@android:drawable/ic_lock_lock" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>
+</layout>
