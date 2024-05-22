@@ -2,11 +2,16 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id ("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
     namespace = "com.example.doorapp"
     compileSdk = 34
+
+    buildFeatures {
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.example.doorapp"
@@ -55,5 +60,8 @@ dependencies {
 
     //kapt
     kapt("androidx.room:room-compiler:$room_version")
+
+    //cardview
+    implementation ("androidx.cardview:cardview:1.0.0")
 
 }

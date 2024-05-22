@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Door App</string>
+    <string name="locked">Locked</string>
+    <string name="doors">Doors</string>
+    <string name="unlocked">Unlocked</string>
+    <string name="num">num</string>
+    <string name="door_name">Door Name</string>
+    <string name="travelling_remember_to_lock_your_door">Travelling? Remember to lock your door!</string>
 </resources>
