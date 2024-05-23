@@ -7,4 +7,7 @@
     <string name="door_name">Door Name</string>
     <string name="travelling_remember_to_lock_your_door">Travelling? Remember to lock your door!</string>
     <string name="add_new_door">Add New Door</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="confirm">confirm</string>
 </resources>

@@ -10,13 +10,13 @@ import kotlinx.coroutines.flow.Flow
 interface DoorDao {
 
     @Upsert
-    suspend fun upsertDoor (door: Door)
+    fun upsertDoor (door: Door)
 
     @Delete
-    suspend fun deleteDoor (door: Door)
+    fun deleteDoor (door: Door)
 
     @Query("SELECT * FROM Door")
-    suspend fun getAllDoors(): Flow<List<Door>>
+    fun getAllDoors(): Flow<List<Door>>
 
     @Query("SELECT * FROM Door ORDER BY name ASC")
     fun getContactOrderByName() : Flow<List<Door>>

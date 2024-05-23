@@ -65,4 +65,13 @@ dependencies {
     //cardview
     implementation ("androidx.cardview:cardview:1.0.0")
 
+    //fragment
+    val fragment_version = "1.7.1"
+
+    implementation("androidx.fragment:fragment-ktx:$fragment_version")
+
+    //Material - bottomSheetDialogFramgent
+    implementation ("com.google.android.material:material:1.5.0")
+
+
 }
