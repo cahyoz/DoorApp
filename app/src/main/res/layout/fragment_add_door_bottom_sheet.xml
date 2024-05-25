@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tf_DoorName"
+        android:id="@+id/textInputLayoutDoorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -34,36 +34,36 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_header">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextDoorName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageButton
-        android:id="@+id/button_advance"
-        android:layout_width="0dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/button_simple"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tf_DoorName" />
+    <RadioGroup
+        android:id="@+id/rdgroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoorName"
+        android:orientation="horizontal"
+        >
 
-    <ImageButton
-        android:id="@+id/button_simple"
-        android:layout_width="0dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button_advance"
-        app:layout_constraintTop_toBottomOf="@+id/tf_DoorName" />
+        <RadioButton
+            android:id="@+id/btn_advance"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+        <RadioButton
+            android:id="@+id/btn_simple"
+            android:layout_width="200dp"
+            android:layout_height="200dp"/>
+
+
+    </RadioGroup>
+
 
     <Button
+        android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
@@ -73,6 +73,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_advance" />
+        app:layout_constraintTop_toBottomOf="@+id/rdgroup" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.doorapp.data.Door
 import com.example.doorapp.databinding.DoorItemBinding
 
-class DoorListAdapter(private val listDoor: ArrayList<Door>) : RecyclerView.Adapter<DoorListAdapter.ListViewHolder>(){
+class DoorListAdapter(private val listDoor: List<Door>) : RecyclerView.Adapter<DoorListAdapter.ListViewHolder>(){
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
          val binding = DoorItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)

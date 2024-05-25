@@ -9,14 +9,13 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Door(
     var name : String,
-    var isLocked : Boolean,
+    var isLocked : Boolean = false,
     val lockMethod: LockMethod,
     @PrimaryKey(autoGenerate = true)
-    var id : Int
+    var id : Int? = null
 ) : Parcelable
 
 enum class LockMethod {
-    SIMPLE_VERTICAL,
-    SIMPLE_HORIZONTAL,
+    SIMPLE,
     ADVANCE
 }

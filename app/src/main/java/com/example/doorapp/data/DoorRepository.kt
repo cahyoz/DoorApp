@@ -11,15 +11,15 @@ class DoorRepository (context : Context){
         doorDao.upsertDoor(door)
     }
 
-    suspend fun getAllDoor(): Flow<List<Door>> {
+    suspend fun getAllDoor(): List<Door> {
         return doorDao.getAllDoors()
     }
 
-    suspend fun getAllDoorOrderByName(): Flow<List<Door>> {
+    suspend fun getAllDoorOrderByName(): List<Door> {
         return doorDao.getContactOrderByName()
     }
 
-    suspend fun getAllDorrOrderByStatus(): Flow<List<Door>> {
+    suspend fun getAllDorrOrderByStatus(): List<Door> {
         return doorDao.getAllDoorsSortedByLockStatusAsc()
     }
 
