@@ -6,6 +6,7 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.doorapp.R
 import com.example.doorapp.UI.ViewModel.DoorViewModel
 import com.example.doorapp.UI.ViewModel.ViewModelFactory
@@ -30,6 +31,10 @@ class MainActivity : AppCompatActivity() {
 
         val repository = DoorRepository(this)
         val factory = ViewModelFactory(repository)
+
+        val layoutManager = LinearLayoutManager(this)
+        binding.rvDoor.layoutManager = layoutManager
+
         doorViewModel = ViewModelProvider(this, factory).get(DoorViewModel::class.java)
 
         binding.btnAdd.setOnClickListener {

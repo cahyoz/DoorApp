@@ -41,22 +41,35 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
+        android:padding="12dp"
+        android:gravity="center"
         android:id="@+id/rdgroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoorName"
         android:orientation="horizontal"
+        android:checkedButton="@id/btn_advance"
         >
 
         <RadioButton
+            android:text="Advance"
             android:id="@+id/btn_advance"
             android:layout_width="200dp"
-            android:layout_height="200dp"/>
+            android:layout_height="200dp"
+            android:background="@drawable/bg_radio_button"
+            android:button="@drawable/ic_advance_icon"
+
+            />
 
         <RadioButton
+            android:layout_marginStart="6dp"
+            android:text="Simple"
             android:id="@+id/btn_simple"
             android:layout_width="200dp"
-            android:layout_height="200dp"/>
+            android:layout_height="200dp"
+            android:background="@drawable/bg_radio_button"
+            android:button="@drawable/ic_simple_icon"
+            />
 
 
     </RadioGroup>

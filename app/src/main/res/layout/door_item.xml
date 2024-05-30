@@ -8,7 +8,9 @@
             type="com.example.doorapp.data.Door" />
     </data>
 
-<androidx.cardview.widget.CardView android:layout_width="match_parent"
+<androidx.cardview.widget.CardView
+    android:layout_margin="6dp"
+    android:layout_width="match_parent"
     android:layout_height="100dp"
     app:cardBackgroundColor="@color/green"
     app:cardCornerRadius="20dp">

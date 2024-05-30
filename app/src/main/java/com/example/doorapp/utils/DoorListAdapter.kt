@@ -22,7 +22,9 @@ class DoorListAdapter(private val listDoor: List<Door>) : RecyclerView.Adapter<D
     inner class ListViewHolder(private val binding : DoorItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(door: Door) {
             binding.door = door
-            binding.executePendingBindings()
+            binding.tvDoorName.text = door.name
+            setLockStatus(binding.imageLock, door.isLocked)
+//            binding.executePendingBindings()
         }
     }
 }
