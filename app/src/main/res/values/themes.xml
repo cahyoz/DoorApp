@@ -11,7 +11,7 @@
         <item name="android:fontWeight">800</item>
         <item name="android:textSize">24sp</item>
     </style>
-    
+
     <style name="prompt">
         <item name="android:fontWeight">400</item>
         <item name="android:textSize">20sp</item>

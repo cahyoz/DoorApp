@@ -1,4 +1,4 @@
-package com.example.doorapp.UI
+package com.example.doorapp.UI.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,18 +1,15 @@
-package com.example.doorapp.UI
+package com.example.doorapp.UI.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.doorapp.R
 import com.example.doorapp.UI.ViewModel.DoorViewModel
 import com.example.doorapp.UI.ViewModel.ViewModelFactory
+import com.example.doorapp.UI.fragment.AddDoorBottomSheetFragment
 import com.example.doorapp.data.Door
-import com.example.doorapp.data.DoorDao
-import com.example.doorapp.data.DoorDatabase
 import com.example.doorapp.data.DoorRepository
 import com.example.doorapp.databinding.ActivityMainBinding
 import com.example.doorapp.utils.DoorListAdapter
@@ -42,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             addDoorBottomSheetFragment.show(supportFragmentManager, "AddDoorBottomSheetFragment")
             }
 
-        doorViewModel.loadDoors()
+//        doorViewModel.loadDoors()
         doorViewModel.doors.observe(this, Observer {
             setDoorData(it)
         })

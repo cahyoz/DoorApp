@@ -13,7 +13,12 @@
         android:theme="@style/Theme.DoorApp"
         tools:targetApi="31">
         <activity
-            android:name=".UI.MainActivity"
+            android:name=".UI.Activity.DoorDetailActivity"
+            android:exported="false"
+            android:label="@string/title_activity_door_detail"
+            android:theme="@style/Theme.DoorApp" />
+        <activity
+            android:name=".UI.Activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

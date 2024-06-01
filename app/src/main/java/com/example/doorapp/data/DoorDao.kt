@@ -1,5 +1,6 @@
 package com.example.doorapp.data
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Query
@@ -16,11 +17,11 @@ interface DoorDao {
     suspend fun deleteDoor (door: Door)
 
     @Query("SELECT * FROM Door")
-    suspend fun getAllDoors(): List<Door>
+    fun getAllDoors(): LiveData<List<Door>>
 
     @Query("SELECT * FROM Door ORDER BY name ASC")
-    suspend fun getContactOrderByName() : List<Door>
+    fun getContactOrderByName() : LiveData<List<Door>>
 
     @Query("SELECT * FROM Door ORDER BY isLocked ASC")
-    suspend fun getAllDoorsSortedByLockStatusAsc(): List<Door>
+    fun getAllDoorsSortedByLockStatusAsc(): LiveData<List<Door>>
 }

@@ -11,25 +11,25 @@ import kotlinx.coroutines.launch
 
 class DoorViewModel(private val repository: DoorRepository): ViewModel() {
     private val _doors = MutableLiveData<List<Door>>()
-    val doors: LiveData<List<Door>> get() = _doors
+    val doors: LiveData<List<Door>> = repository.allDoor
 
-    fun loadDoors() {
-        viewModelScope.launch {
-            _doors.value = repository.getAllDoor()
-        }
-    }
-
-    fun loadByName() {
-        viewModelScope.launch {
-            _doors.value = repository.getAllDoorOrderByName()
-        }
-    }
-
-    fun loadByStatus() {
-        viewModelScope.launch {
-            _doors.value = repository.getAllDorrOrderByStatus()
-        }
-    }
+//    fun loadDoors() {
+//        viewModelScope.launch {
+//            _doors.value = repository.getAllDoor()
+//        }
+//    }
+//
+//    fun loadByName() {
+//        viewModelScope.launch {
+//            _doors.value = repository.getAllDoorOrderByName()
+//        }
+//    }
+//
+//    fun loadByStatus() {
+//        viewModelScope.launch {
+//            _doors.value = repository.getAllDorrOrderByStatus()
+//        }
+//    }
 
     fun upsertDoor(door: Door){
         viewModelScope.launch {
